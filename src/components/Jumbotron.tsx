@@ -12,6 +12,8 @@ const Jumbotron: FC = () => {
                         <h2 className="head-title">{t('welcome.title1')} <br/> {t('welcome.title2')}</h2>
                         <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id
                             tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non.</p>
+                        <p>Aliquam vestibulum cursus felis. In iaculis iaculis sapien ac condimentum. Vestibulum congue posuere lacus, id
+                            tincidunt nisi porta sit amet. Suspendisse et sapien varius, pellentesque dui non.</p>
                         <div className="job-search-form">
                             <form>
                                 <div className="row">
@@ -26,12 +28,15 @@ const Jumbotron: FC = () => {
                                                 <label className="styled-select">
                                                     <select>
                                                         <option value="none">Locations</option>
-                                                        <option value="none">New York</option>
-                                                        <option value="none">California</option>
-                                                        <option value="none">Washington</option>
-                                                        <option value="none">Birmingham</option>
-                                                        <option value="none">Chicago</option>
-                                                        <option value="none">Phoenix</option>
+                                                        <option value="none">Colombo</option>
+                                                        <option value="none">Kandy</option>
+                                                        <option value="none">Matara</option>
+                                                        <option value="none">Jaffna</option>
+                                                        <option value="none">Batticaloa</option>
+                                                        <option value="none">Kurunegala</option>
+                                                        <option value="none">Badulla</option>
+                                                        <option value="none">Kegalle</option>
+                                                        <option value="none">Polannaruwa</option>
                                                     </select>
                                                 </label>
                                             </div>

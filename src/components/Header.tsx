@@ -144,7 +144,10 @@ const Header: FC = () => {
                                             <a className="dropdown-item" onClick={() => i18n.changeLanguage("en")}>English</a>
                                         </li>
                                         <li style={{cursor: 'pointer'}}>
-                                            <a className="dropdown-item" onClick={() => i18n.changeLanguage("bn")}>Bengali</a>
+                                            <a className="dropdown-item" onClick={() => i18n.changeLanguage("ta")}>Tamil</a>
+                                        </li>
+                                        <li style={{cursor: 'pointer'}}>
+                                            <a className="dropdown-item" onClick={() => i18n.changeLanguage("si")}>Sinhala</a>
                                         </li>
                                     </ul>
                                 </li>
