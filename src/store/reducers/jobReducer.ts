@@ -1,5 +1,5 @@
 import { ActionTypes } from "../actions/types";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 
 
 const jobReducer = (state: any, action: any) => {

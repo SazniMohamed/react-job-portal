@@ -4,7 +4,7 @@ import Header from "../../components/Header";
 import { Helmet } from "react-helmet";
 import { useTranslation } from "react-i18next";
 import { AuthContext } from "../../contexts/AuthContext";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 
 const {useToasts} = require('react-toast-notifications');
 

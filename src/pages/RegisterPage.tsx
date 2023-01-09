@@ -2,7 +2,7 @@
 import React, { useState, useContext } from "react";
 import Header from "../components/Header";
 import { Helmet } from "react-helmet";
-import AxiosConfig from "../AxiosConfig";
+import AxiosConfig from "../api/AxiosConfig";
 import { AuthContext } from "../contexts/AuthContext";
 import { NavLink, Redirect } from "react-router-dom";
 import swal from 'sweetalert';

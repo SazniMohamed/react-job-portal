@@ -2,7 +2,7 @@
 import React, { FC, useContext, useEffect, useState } from "react";
 import { Modal, Button } from "react-bootstrap";
 import { AuthContext } from "../../contexts/AuthContext";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 import { IApplicant } from "../../interfaces";
 
 interface Props {

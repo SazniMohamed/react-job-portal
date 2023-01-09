@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, {useEffect, useState} from "react";
 import CategoryItem from "./CategoryItem";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 import CategoryItemSkeleton from "../skeletons/CategoryItemSkeleton";
 import { ICategory } from "../../interfaces";
 

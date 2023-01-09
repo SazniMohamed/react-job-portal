@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect, useContext } from "react";
-import AxiosConfig from "../AxiosConfig";
+import AxiosConfig from "../api/AxiosConfig";
 import moment from "moment";
 import { Helmet } from "react-helmet";
 import { useParams, Redirect, useHistory } from 'react-router-dom';

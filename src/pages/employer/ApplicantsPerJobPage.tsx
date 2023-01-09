@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { FC, useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../contexts/AuthContext";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 import EmployerSidebarLayout from "../../components/employer-dashboard/EmployerSidebarLayout";
 import BaseLayout from "../../components/BaseLayout";
 import { Link, RouteComponentProps } from "react-router-dom";

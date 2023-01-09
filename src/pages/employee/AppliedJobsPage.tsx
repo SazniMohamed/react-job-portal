@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useState, useEffect, useContext, FC } from 'react';
 import { AuthContext } from '../../contexts/AuthContext';
-import AxiosConfig from '../../AxiosConfig';
+import AxiosConfig from '../../api/AxiosConfig';
 import Header from '../../components/Header';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';

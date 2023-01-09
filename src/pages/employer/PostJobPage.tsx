@@ -1,7 +1,7 @@
 /* eslint-disable */
 import React, { useEffect, useState, Fragment, useContext, FC } from "react";
 import BaseLayout from "../../components/BaseLayout";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 import Select from "react-select";
 import makeAnimated from "react-select/animated";
 import Flatpickr from "react-flatpickr";

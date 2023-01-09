@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import EmployerSidebarLayout from "../../components/employer-dashboard/EmployerSidebarLayout";
 import BaseLayout from "../../components/BaseLayout";
-import AxiosConfig from "../../AxiosConfig";
+import AxiosConfig from "../../api/AxiosConfig";
 import { AuthContext } from "../../contexts/AuthContext";
 import { Link } from "react-router-dom";
 import { IJob } from "../../interfaces";

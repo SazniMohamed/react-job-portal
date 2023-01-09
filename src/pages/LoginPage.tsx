@@ -2,7 +2,7 @@
 import React, { useState, useContext, useRef, useEffect, FC } from "react";
 import Header from "../components/Header";
 import { Helmet } from "react-helmet";
-import AxiosConfig from "../AxiosConfig";
+import AxiosConfig from "../api/AxiosConfig";
 import { AuthContext } from "../contexts/AuthContext";
 import { Redirect, NavLink, RouteComponentProps } from "react-router-dom";
 import jwtDecode, { JwtPayload } from 'jwt-decode';
@@ -13,7 +13,8 @@ import FacebookSocialAuth from "../components/social/FacebookSocialAuth";
 const {useToasts} = require('react-toast-notifications');
 
 interface IJwtPayload extends JwtPayload {
-    user: any
+    id: number;
+    email: string;
 }
 
 const LoginPage: FC<RouteComponentProps> = ({history, location}) => {
@@ -31,7 +32,7 @@ const LoginPage: FC<RouteComponentProps> = ({history, location}) => {
             _isMounted.current = false;
         }
     }, []);
-
+    console.log("Sani", authContext.state.isAuthenticated)
     const handleSubmit: React.FormEventHandler<HTMLFormElement> = (evt) => {
         evt.preventDefault();
         setSubmitted(true);
@@ -50,16 +51,19 @@ const LoginPage: FC<RouteComponentProps> = ({history, location}) => {
         const loginUser = async () => {
             try {
                 const res = await AxiosConfig.post('login/', postData);
-                let decoded = jwtDecode<IJwtPayload>(res.data.access);
+                let decoded = jwtDecode<IJwtPayload>(res.data.token);
                 authContext.authDispatch({
                     type: authContext.ActionTypes.LOGIN,
                     payload: {
-                        user: decoded.user || {},
-                        token: res.data.access,
-                        refreshToken: res.data.refresh,
+                        user: decoded.email || {},
+                        token: res.data.token,
+                        refreshToken: res.data.refreshToken,
+                        isAuthenticated: true
                     },
                 });
                 addToast('Logged in successfully', {appearance: 'success', autoDismiss: true,});
+                localStorage.setItem('token', res.data.token);
+                localStorage.setItem('refreshToken', res.data.refreshToken);
                 setSubmitted(false);
                 if (_isMounted.current) {
                     history.push('/');

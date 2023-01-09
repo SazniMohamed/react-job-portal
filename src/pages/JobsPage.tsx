@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React, { useState, useEffect, useContext } from "react";
-import AxiosConfig from "../AxiosConfig";
+import AxiosConfig from "../api/AxiosConfig";
 import Header from "../components/Header";
 import JobItem from "../components/job/JobItem";
 import { Helmet } from "react-helmet";
